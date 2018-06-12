@@ -13,9 +13,10 @@ fun whatFoldDoes(): Int {
 }
 
 fun Shop.getSetOfProductsOrderedByEachCustomer(): Set<Product> {
-    // Return the set of products that were ordered by each of the customers
+    allOrderedProducts.forEach { println("$it") }
+
     return customers.fold(allOrderedProducts, {
-        orderedByAll, customer ->
-        todoCollectionTask()
+        orderedByAll, customer -> orderedByAll.filter { it -> customer.orderedProducts.contains(it) }.toSet()
+//        todoCollectionTask()
     })
 }

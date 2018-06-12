@@ -3,6 +3,8 @@ package i_introduction._6_Data_Classes
 import util.TODO
 import util.doc6
 
+data class Person(val name: String, val age: Int)
+
 fun todoTask6(): Nothing = TODO(
     """
         Convert 'JavaCode6.Person' class to Kotlin.
@@ -15,10 +17,7 @@ fun todoTask6(): Nothing = TODO(
     references = { JavaCode6.Person("Alice", 29) }
 )
 
-class Person
-
 fun task6(): List<Person> {
-    todoTask6()
-    return listOf(/*Person("Alice", 29), Person("Bob", 31)*/)
+    return listOf(Person("Alice", 29), Person("Bob", 31))
 }
 
